@@ -9,4 +9,7 @@
  * Main module of the application.
  */
 angular
-  .module('headerDemoUiApp', []);
+  .module('headerDemoUiApp', [])
+  .config(function ($httpProvider) {
+    $httpProvider.interceptors.push('AuthInterceptor');
+  });
